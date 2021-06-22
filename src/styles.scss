@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+
+/* You can add global styles to this file, and also import other style files */
+$clr-1: rgb(255, 255, 55);
+$clr-2: black;
+$clr-3: white;
+
+* {
+  box-sizing: border-box;
+  font-family: 'Lora', serif;
+}
+
+::selection {
+    background-color: $clr-1;
+    color: $clr-2;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    padding: 0;
+    margin: 1rem;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    background: $clr-1;
+    height: 10px;
+    width: 100%;
+}

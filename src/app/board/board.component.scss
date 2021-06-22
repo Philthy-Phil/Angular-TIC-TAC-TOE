@@ -1,0 +1,44 @@
+$clr-1: rgb(255, 255, 55);
+$clr-2: black;
+$clr-3: white;
+
+main {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  gap: 10px;
+}
+button {
+    cursor: pointer;
+    margin-bottom: 20px;
+    background-color: $clr-2;
+    color: $clr-1;
+    border: none;
+    padding: .5rem;
+    
+    &:hover {
+      background-color: $clr-1;
+      color: $clr-2;
+    }
+}
+app-square {
+  height: 100px;
+}
+.winner {
+  grid-column: 1 / -1;
+  height: 100%;
+
+  p {
+    color: $clr-2;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .success {
+    background-color: $clr-1;
+    color: $clr-2;
+  }
+}
+.noPossibleEvent {
+  cursor: none;
+  pointer-events: none;
+}

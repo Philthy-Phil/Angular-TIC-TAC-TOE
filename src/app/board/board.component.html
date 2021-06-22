@@ -1,0 +1,15 @@
+<h3>Current Player: {{ player }}</h3>
+<button (click)="newGame()">Start new Game</button>
+
+<main>    
+    <app-square 
+        *ngFor="let val of squares; let idx = index;"
+        [value]="val"
+        (click)="makeTurn(idx)"
+        [ngClass]="{noPossibleEvent: winner.length > 0}"
+        >
+    </app-square>
+    <div class="winner" *ngIf="winner.length > 0">
+        <p [ngClass]="{success: winner.length > 0}">Player {{ winner }} won this game! <br />Start a new one!</p>
+    </div>
+</main>

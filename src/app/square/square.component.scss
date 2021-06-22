@@ -1,0 +1,18 @@
+$clr-1: rgb(255, 255, 55);
+$clr-2: black;
+$clr-3: white;
+
+button {
+    width: 100%;
+    height: 100%;
+    font-size: 2em;
+    background-color: $clr-2;
+    color: $clr-1;
+    cursor: pointer;
+    border: 1px solid $clr-3;
+
+    &:hover {
+      background-color: $clr-1;
+      color: $clr-2;
+    }
+}
